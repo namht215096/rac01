@@ -66,5 +66,6 @@
       </Button>
       <Button fx:id="btnnoteCs1" layoutX="514.0" layoutY="56.0" mnemonicParsing="false" onAction="#dosthCs1" prefHeight="166.0" prefWidth="56.0" style="-fx-background-color: black;" />
       <Button fx:id="btnnoteDs1" layoutX="580.0" layoutY="56.0" mnemonicParsing="false" onAction="#dosthDs1" prefHeight="166.0" prefWidth="56.0" style="-fx-background-color: black;" />
+      <Button layoutX="655.0" layoutY="14.0" mnemonicParsing="false" onAction="#changeType" text="Button" />
    </children>
 </AnchorPane>

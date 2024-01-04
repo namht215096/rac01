@@ -91,10 +91,10 @@ public class Piano {
     private String noteCs1File = "src/main/java/piano/Music_Notes/C_s1.wav";
     private String noteDs1File = "src/main/java/piano/Music_Notes/D_s1.wav";
 
-
+    private String type = "Piano";
 
     @FXML void initialize() {
-        noteC = new Note(noteCFile);
+        noteC = new Note(noteCFile, DRUMPATH);
         noteD = new Note(noteDFile);
         noteCs = new Note(noteCsFile);
         noteE = new Note(noteEFile);
@@ -116,76 +116,86 @@ public class Piano {
     }
 
     @FXML
+    void changeType(ActionEvent event) {
+        if (type=="Piano"){
+            System.out.println("Change to drum");
+            type = "Drum";
+        }else{
+            System.out.println("Change to piano");
+            type = "Piano";
+        }
+    }
+    @FXML
     private void dosthC(){
-        noteC.playNote();
+        noteC.playNote(type);
     }
     @FXML
     private void dosthD(){
-        noteD.playNote();
+        noteD.playNote(type);
     }
     @FXML
     private void dosthCs() {
-        noteCs.playNote();
+        noteCs.playNote(type);
     }
     @FXML
     private void dosthE() {
-        noteE.playNote();
+        noteE.playNote(type);
     }
     @FXML
     private void dosthF() {
-        noteF.playNote();
+        noteF.playNote(type);
     }
     @FXML
     private void dosthDs() {
-        noteDs.playNote();
+        noteDs.playNote(type);
     }
     @FXML
     private void dosthFs() {
-        noteFs.playNote();
+        noteFs.playNote(type);
     }
     @FXML
     private void dosthG() {
-        noteG.playNote();
+        noteG.playNote(type);
     }
     @FXML
     private void dosthA() {
-        noteA.playNote();
+        noteA.playNote(type);
     }
     @FXML
     private void dosthB() {
-        noteB.playNote();
+        noteB.playNote(type);
     }
     @FXML
     private void dosthGs() {
-        noteGs.playNote();
+        noteGs.playNote(type);
     }
     @FXML
     private void dosthBb() {
-        noteBb.playNote();
+        noteBb.playNote(type);
     }
     @FXML
     private void dosthC1() {
-        noteC1.playNote();
+        noteC1.playNote(type);
     }
     @FXML
     private void dosthD1() {
-        noteD1.playNote();
+        noteD1.playNote(type);
     }
     @FXML
     private void dosthE1() {
-        noteE1.playNote();
+        noteE1.playNote(type);
     }
     @FXML
     private void dosthF1() {
-        noteF1.playNote();
+        noteF1.playNote(type);
     }
     @FXML
     private void dosthCs1() {
-        noteCs1.playNote();
+        noteCs1.playNote(type);
     }
     @FXML
     private void dosthDs1() {
-        noteDs1.playNote();
+        noteDs1.playNote(type);
     }
 
 
