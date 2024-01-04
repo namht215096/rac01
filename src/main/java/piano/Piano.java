@@ -73,45 +73,63 @@ public class Piano {
 
 
     private String noteCFile = "src/main/java/piano/Music_Notes/C.wav";
+    private String dnoteCFile = "src/main/java/piano/Music_Notes/Steel_Drum/C_Drum.wav";
     private String noteDFile = "src/main/java/piano/Music_Notes/D.wav";
+    private String dnoteDFile = "src/main/java/piano/Music_Notes/Steel_Drum/D_Drum.wav";
     private String noteCsFile = "src/main/java/piano/Music_Notes/C_s.wav";
+    private String dnoteCqFile = "src/main/java/piano/Music_Notes/Steel_Drum/Cq_Drum.wav";
     private String noteEFile = "src/main/java/piano/Music_Notes/E.wav";
+    private String dnoteEFile = "src/main/java/piano/Music_Notes/Steel_Drum/E_Drum.wav";
     private String noteFFile = "src/main/java/piano/Music_Notes/F.wav";
+    private String dnoteFFile = "src/main/java/piano/Music_Notes/Steel_Drum/F_Drum.wav";
     private String noteDsFile = "src/main/java/piano/Music_Notes/D_s.wav";
+    private String dnoteDqFile = "src/main/java/piano/Music_Notes/Steel_Drum/Dq_Drum.wav";
     private String noteFsFile = "src/main/java/piano/Music_Notes/F_s.wav";
+    private String dnoteFqFile = "src/main/java/piano/Music_Notes/Steel_Drum/Fq_Drum.wav";
     private String noteGFile = "src/main/java/piano/Music_Notes/G.wav";
+    private String dnoteGFile = "src/main/java/piano/Music_Notes/Steel_Drum/G_Drum.wav";
     private String noteAFile = "src/main/java/piano/Music_Notes/A.wav";
+    private String dnoteAFile = "src/main/java/piano/Music_Notes/Steel_Drum/A_Drum.wav";
     private String noteBFile = "src/main/java/piano/Music_Notes/B.wav";
+    private String dnoteBFile = "src/main/java/piano/Music_Notes/Steel_Drum/B_Drum.wav";
     private String noteGsFile = "src/main/java/piano/Music_Notes/G_s.wav";
+    private String dnoteGqFile = "src/main/java/piano/Music_Notes/Steel_Drum/Gq_Drum.wav";
     private String noteBbFile = "src/main/java/piano/Music_Notes/Bb.wav";
+    private String dnoteBbFile = "src/main/java/piano/Music_Notes/Steel_Drum/Bb_Drum.wav";
     private String noteC1File = "src/main/java/piano/Music_Notes/C1.wav";
+    private String dnoteC1File = "src/main/java/piano/Music_Notes/Steel_Drum/C1_Drum.wav";
     private String noteD1File = "src/main/java/piano/Music_Notes/D1.wav";
+    private String dnoteD1File = "src/main/java/piano/Music_Notes/Steel_Drum/D1_Drum.wav";
     private String noteE1File = "src/main/java/piano/Music_Notes/E1.wav";
+    private String dnoteE1File = "src/main/java/piano/Music_Notes/Steel_Drum/E1_Drum.wav";
     private String noteF1File = "src/main/java/piano/Music_Notes/F1.wav";
+    private String dnoteF1File = "src/main/java/piano/Music_Notes/Steel_Drum/F1_Drum.wav";
     private String noteCs1File = "src/main/java/piano/Music_Notes/C_s1.wav";
+    private String dnoteCq1File = "src/main/java/piano/Music_Notes/Steel_Drum/Cq1_Drum.wav";
     private String noteDs1File = "src/main/java/piano/Music_Notes/D_s1.wav";
+    private String dnoteDq1File = "src/main/java/piano/Music_Notes/Steel_Drum/Dq1_Drum.wav";
 
     private String type = "Piano";
 
     @FXML void initialize() {
-        noteC = new Note(noteCFile, DRUMPATH);
-        noteD = new Note(noteDFile);
-        noteCs = new Note(noteCsFile);
-        noteE = new Note(noteEFile);
-        noteF = new Note(noteFFile);
-        noteDs= new Note(noteDsFile);
-        noteFs= new Note(noteFsFile);
-        noteG= new Note(noteGFile);
-        noteA= new Note(noteAFile);
-        noteB= new Note(noteBFile);
-        noteGs= new Note(noteGsFile);
-        noteBb= new Note(noteBbFile);
-        noteC1= new Note(noteC1File);
-        noteD1= new Note(noteD1File);
-        noteE1= new Note(noteE1File);
-        noteF1= new Note(noteF1File);
-        noteCs1 = new Note(noteCs1File);
-        noteDs1 = new Note(noteDs1File);
+        noteC = new Note(noteCFile, dnoteCFile);
+        noteD = new Note(noteDFile, dnoteDFile);
+        noteCs = new Note(noteCsFile, dnoteCqFile);
+        noteE = new Note(noteEFile, dnoteEFile);
+        noteF = new Note(noteFFile, dnoteFFile);
+        noteDs= new Note(noteDsFile, dnoteDqFile);
+        noteFs= new Note(noteFsFile, dnoteFqFile);
+        noteG= new Note(noteGFile, dnoteGFile);
+        noteA= new Note(noteAFile, dnoteAFile);
+        noteB= new Note(noteBFile, dnoteBFile);
+        noteGs= new Note(noteGsFile, dnoteGqFile);
+        noteBb= new Note(noteBbFile, dnoteBbFile);
+        noteC1= new Note(noteC1File, dnoteC1File);
+        noteD1= new Note(noteD1File, dnoteD1File);
+        noteE1= new Note(noteE1File, dnoteE1File);
+        noteF1= new Note(noteF1File, dnoteF1File);
+        noteCs1 = new Note(noteCs1File, dnoteCq1File);
+        noteDs1 = new Note(noteDs1File, dnoteDq1File);
 
     }
 
