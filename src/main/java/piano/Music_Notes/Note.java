@@ -7,7 +7,7 @@ public class Note {
 
     private String noteFilePiano;
     private String noteFileDrum;
-    MediaPlayer pianoMedia;
+    public MediaPlayer pianoMedia;
     MediaPlayer drumMedia;
     public Note(String pianoPath, String drumPath)
     {

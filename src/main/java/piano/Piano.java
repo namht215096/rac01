@@ -1,12 +1,15 @@
 package piano;
-
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+import javafx.stage.Stage;
+import piano.Music_Notes.Note;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import java.util.ArrayList;
+import java.util.List;
 
-import piano.Music_Notes.Note;
 
 import java.io.File;
 
@@ -48,6 +51,13 @@ public class Piano {
     private Button btnnoteCs1;
     @FXML
     private Button btnnoteDs1;
+    @FXML
+    private Button btnVlmUp;
+    @FXML
+    private Button btnvlmdown;
+    @FXML
+    private Button btnexit;
+
 
 
 
@@ -111,6 +121,8 @@ public class Piano {
 
     private String type = "Piano";
 
+    private List<MediaPlayer> allMediaPlayers = new ArrayList<>();
+
     @FXML void initialize() {
         noteC = new Note(noteCFile, dnoteCFile);
         noteD = new Note(noteDFile, dnoteDFile);
@@ -131,8 +143,59 @@ public class Piano {
         noteCs1 = new Note(noteCs1File, dnoteCq1File);
         noteDs1 = new Note(noteDs1File, dnoteDq1File);
 
+        allMediaPlayers.add(noteC.pianoMedia);
+        allMediaPlayers.add(noteD.pianoMedia);
+        allMediaPlayers.add(noteCs.pianoMedia);
+        allMediaPlayers.add(noteE.pianoMedia);
+        allMediaPlayers.add(noteF.pianoMedia);
+        allMediaPlayers.add(noteDs.pianoMedia);
+        allMediaPlayers.add(noteFs.pianoMedia);
+        allMediaPlayers.add(noteG.pianoMedia);
+        allMediaPlayers.add(noteA.pianoMedia);
+        allMediaPlayers.add(noteB.pianoMedia);
+        allMediaPlayers.add(noteGs.pianoMedia);
+        allMediaPlayers.add(noteBb.pianoMedia);
+        allMediaPlayers.add(noteC1.pianoMedia);
+        allMediaPlayers.add(noteD1.pianoMedia);
+        allMediaPlayers.add(noteE1.pianoMedia);
+        allMediaPlayers.add(noteF1.pianoMedia);
+        allMediaPlayers.add(noteCs1.pianoMedia);
+        allMediaPlayers.add(noteDs1.pianoMedia);
+
+
+    }
+    @FXML
+    private void Vlup(ActionEvent event) {
+        for (MediaPlayer mediaPlayer : allMediaPlayers) {
+            mediaPlayer.setVolume(mediaPlayer.getVolume() + 0.1);
+            System.out.println("vlm +");
+        }
     }
 
+    @FXML
+    private void Vldown(ActionEvent event) {
+        for (MediaPlayer mediaPlayer : allMediaPlayers) {
+            mediaPlayer.setVolume(mediaPlayer.getVolume() - 0.1);
+            System.out.println("vlm -");
+        }
+    }
+
+     //allMediaPlayers.add(mediaPlayer2);
+
+    @FXML
+    public void exit(ActionEvent event)
+    {
+        Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("EXIT");
+        //alert.setHeaderText("exit ?");
+        alert.setContentText("ARE YOU WANT TO QUIT ?");
+        if(alert.showAndWait().get()==ButtonType.OK)
+        {
+            // quit
+            Stage stage = (Stage) btnexit.getScene().getWindow();
+            stage.close();
+        }
+    }
     @FXML
     void changeType(ActionEvent event) {
         if (type=="Piano"){
